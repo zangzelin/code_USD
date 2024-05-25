@@ -1,0 +1,31 @@
+program: main.py
+method: grid
+project: MTGFLOW_ZL
+name: trainsplit_MSL_seed
+metric:
+  goal: maximize
+  name: roc_test_max
+parameters:
+  alpha:
+    values: [ 0.1 ]
+  k:
+    values: [ 20 ]
+  loss_weight_manifold_po:
+    values: [ 1 ]
+  loss_weight_manifold_ne:
+    values: [ 5 ]
+  n_blocks:
+    values: [ 2 ]
+  batch_size:
+    values: [ 128 ]
+  window_size:
+    values: [ 60 ]
+  train_split:
+    values: [ 0.6,0.65,0.7,0.75,0.8 ]
+  name:
+    values: [ 'MSL' ]
+  seed:
+    values: [ 15,16,17,18,19 ]
+
+
+

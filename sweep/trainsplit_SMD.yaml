@@ -1,0 +1,33 @@
+program: main.py
+method: grid
+project: MTGFLOW_ZL
+name: trainsplit_SMD_seed
+metric:
+  goal: maximize
+  name: roc_test_max
+parameters:
+  alpha:
+    values: [ 0.1 ]
+  k:
+    values: [ 30 ]
+  loss_weight_manifold_po:
+    values: [ 5 ]
+  loss_weight_manifold_ne:
+    values: [ 1 ]
+  lr:
+    values: [ 1e-3 ]
+  n_blocks:
+    values: [ 2 ]
+  batch_size:
+    values: [ 256 ]
+  window_size:
+    values: [ 60 ]
+  train_split:
+    values: [ 0.6,0.65,0.7,0.75,0.8 ]
+  name:
+    values: ['machine-1-1', 'machine-1-2', 'machine-1-3', 'machine-1-4', 'machine-1-5', 'machine-1-6', 'machine-1-7', 'machine-1-8', 'machine-2-1', 'machine-2-2', 'machine-2-3', 'machine-2-4', 'machine-2-5', 'machine-2-6', 'machine-2-7', 'machine-2-8', 'machine-2-9', 'machine-3-1', 'machine-3-10', 'machine-3-11', 'machine-3-2', 'machine-3-3', 'machine-3-4', 'machine-3-5', 'machine-3-6', 'machine-3-7', 'machine-3-8', 'machine-3-9' ]
+  seed:
+    values: [ 15,16,17,18,19 ]
+
+
+
